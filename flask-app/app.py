@@ -47,7 +47,7 @@ def my_form_post():
     with graph.as_default():
         prediction = model.predict_classes(x)
     pred = str(prediction[0]+1)
-    return render_template("result.html",result = pred, text_input = text)
+    return render_template("result.html", result=pred, text_input=text)
 
 if __name__ == "__main__":
     app.run(debug=True, host="0.0.0.0")
